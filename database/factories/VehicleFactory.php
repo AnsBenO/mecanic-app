@@ -22,7 +22,7 @@ class VehicleFactory extends Factory
             'model' => $this->faker->word,
             'fuelType' => $this->faker->randomElement(['Gasoline', 'Diesel', 'Electric']),
             'registration' => $this->faker->unique()->regexify('[A-Za-z0-9]{6}'),
-            'photos' => null, // Will be handled manually if needed
+            'photos' => null,
             'clientID' => Client::factory()->create()->id,
         ];
     }
