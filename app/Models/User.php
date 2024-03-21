@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Repair::class, 'mechanicID');
     }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
 }
